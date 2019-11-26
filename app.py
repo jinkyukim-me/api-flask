@@ -14,7 +14,7 @@ def test():
 @app.route('/post', methods=['post'])
 def post():
 	value = request.form['test']
-	return value
+	return render_template('default.html')
 
 if __name__ == "__main__":
 	app.run(debug=True)
