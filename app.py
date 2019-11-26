@@ -11,4 +11,11 @@ def hello():
 def test():
 	return render_template('post.html')
 
-@app.route('/post'), 
+@app.route('/post', methods=['post'])
+def post():
+	value = request.form['test']
+	return value
+
+if __name__ == "__main__":
+	app.run(debug=True)
+ 
